@@ -20,7 +20,7 @@ export default function Home() {
     const fetchNotes = async()=>{
       
       try{
-        const res = await fetch('http://localhost:8000/api/');
+        const res = await fetch(`${NEXT_URL}/api/`);
         console.log(res);
         const resData = await res.json();
         setNotes(resData.data);

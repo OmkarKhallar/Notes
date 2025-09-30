@@ -18,7 +18,7 @@ const Form = ({ setTitle, setDesc, title, desc, setEdit, edit,setNotes }) => {
             try {
                 e.preventDefault();
                 const data = { title, desc };
-                const res = await fetch(`http://localhost:8000/api/${edit.id}`, {
+                const res = await fetch(`${NEXT_URL}/api/${edit.id}`, {
                     'method': "put",
                     'headers': {
                         "content-type": "application/json",
@@ -63,7 +63,7 @@ const Form = ({ setTitle, setDesc, title, desc, setEdit, edit,setNotes }) => {
                 return;
             } 
             const data = { title, desc };
-            const res = await fetch('http://localhost:8000/api/', {
+            const res = await fetch(`${NEXT_URL}/api/`, {
                 'method': "post",
                 'headers': {
                     "content-type": "application/json",

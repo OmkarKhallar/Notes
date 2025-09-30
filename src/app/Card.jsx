@@ -15,7 +15,7 @@ const Card = ({ data, setNotes,setEdit,edit,setTitle,setDesc,desc,title }) => {
 
     const handleDelete = async (id) => {
         try {
-            const deleted = await fetch(`http://localhost:8000/api/${id}`, {
+            const deleted = await fetch(`${NEXT_URL}/api/${id}`, {
                 method: "delete"
             });
             console.log(deleted);
